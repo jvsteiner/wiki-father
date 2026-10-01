@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template. scripts/watcher.sh install fills in the __PLACEHOLDERS__ and
+     copies the result to ~/Library/LaunchAgents. Do not load this file directly. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>__LABEL__</string>
+
+  <!-- Fire when the inbox changes. launchd coalesces rapid changes; the script
+       debounces again on top of that, so dragging ten files is one run. -->
+  <key>WatchPaths</key>
+  <array>
+    <string>__WIKI__/inbox</string>
+  </array>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__WIKI__/scripts/ingest.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>__WIKI__</string>
+
+  <!-- launchd gives a minimal PATH; claude, codex and python3 are not on it. -->
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>__HOME__/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>HOME</key>
+    <string>__HOME__</string>
+    <!-- claude | codex. Set WIKI_HARNESS / WIKI_MODEL before `make start`
+         to choose; a blank model means the harness default. -->
+    <key>WIKI_HARNESS</key>
+    <string>__HARNESS__</string>
+    <key>WIKI_MODEL</key>
+    <string>__MODEL__</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+  <key>StandardOutPath</key>
+  <string>__WIKI__/.state/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>__WIKI__/.state/launchd.err.log</string>
+</dict>
+</plist>

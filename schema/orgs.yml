@@ -1,0 +1,20 @@
+# Organisations roster. GROUND TRUTH, owned by you. The agent may never edit it.
+#
+# Transcribers mangle company names even harder than people's names, because
+# company names are often unusual words. List every wrong spelling you see.
+#
+# Format (a tiny parser reads this -- keep to exactly this shape):
+#
+#   orgs:
+#     - canonical: Veltrona
+#       aliases: [Valtrona, Vel Trona, Veltronna]
+
+orgs:
+
+# ── Unresolved ──────────────────────────────────────────────────────────────
+#   unresolved:
+#     - placeholder: TEMP_ORG_Veltrona
+#       candidates: [Valtrona, Vel Trona]
+#       role: customer in the September calls
+
+unresolved:

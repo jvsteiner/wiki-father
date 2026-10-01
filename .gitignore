@@ -1,0 +1,14 @@
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# Your original files, kept after ingest so a MOVE into the inbox is not
+# destructive. raw/ holds the wiki's copy of record; this holds yours, under the
+# name you gave it. Not tracked -- it is not the wiki's to version.
+inbox/_done/
+wiki/.obsidian/
+.state/ingest.lock.pid
+.state/*.pid
+*.pyc
+.state/no-claude-config/

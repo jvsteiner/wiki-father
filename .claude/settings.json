@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(./CLAUDE.md)",
+      "Edit(./raw/**)",
+      "Edit(./.claude/**)",
+      "Edit(./schema/**)"
+    ],
+    "allow": [
+      "Bash(python3 scripts/backstory.py:*)",
+      "Bash(python3 scripts/convert.py:*)",
+      "Bash(python3 scripts/datefor.py:*)",
+      "Bash(python3 scripts/dedupe.py:*)",
+      "Bash(python3 scripts/file.py:*)",
+      "Bash(python3 scripts/orgs.py:*)",
+      "Bash(python3 scripts/queue.py:*)",
+      "Bash(python3 scripts/resolve.py:*)",
+      "Bash(python3 scripts/speakers.py:*)",
+      "Bash(python3 scripts/timeline.py:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}

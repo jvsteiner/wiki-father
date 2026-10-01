@@ -1,0 +1,32 @@
+# People roster. GROUND TRUTH, owned by you. The agent may never edit it.
+#
+# When a document disagrees with this file, this file is right.
+# Transcribers mangle names; this is how the wiki un-mangles them.
+#
+# Start by adding YOURSELF, with every way a transcriber has spelled you.
+# Then add people as the agent proposes them in its reports.
+#
+# Format (a tiny parser reads this -- keep to exactly this shape):
+#
+#   people:
+#     - canonical: Alex Morgan
+#       aliases: [Alex, Alix, Alex M]
+#       note: |
+#         Head of platform at Acme.
+
+people:
+
+# ── Unresolved ──────────────────────────────────────────────────────────────
+# Names the agent could not resolve. It uses a TEMP_PERSON_ token in the wiki
+# and proposes an entry here in its report. Confirm one with:
+#
+#   make resolve TOKEN=TEMP_PERSON_Mikko NAME="Mikko Virtanen"
+#
+# Format:
+#
+#   unresolved:
+#     - placeholder: TEMP_PERSON_Mikko
+#       candidates: [Mikko, Miko, Micco]
+#       role: engineer on the Acme call, owns the API work
+
+unresolved:
