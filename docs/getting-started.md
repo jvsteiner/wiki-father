@@ -11,6 +11,13 @@ cd ~/wiki
 git init && git add -A && git commit -m "empty wiki"
 ```
 
+If you cloned it instead, cut the link back to the template so your notes can
+never be pushed anywhere by accident:
+
+```bash
+cd ~/wiki && git remote remove origin
+```
+
 `~/wiki` is only a convention. Every script finds its own folder, so any path
 works.
 
