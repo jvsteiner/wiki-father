@@ -80,3 +80,8 @@ Undo the last run: `git revert HEAD`.
 Everything stays on your machine. The repository has no remote. The agent sends
 document text to whichever model provider you use (Anthropic or OpenAI), the
 same as any other chat with it. Never put passwords or keys in this folder.
+
+## License
+
+MIT — see [LICENSE](LICENSE). It covers the machinery. The notes you write
+with it are yours.
